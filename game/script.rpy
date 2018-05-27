@@ -31,7 +31,7 @@ label start:
             jump head
 
     return
-
+#main sections
 label midsection:
 
     scene red
@@ -61,6 +61,164 @@ label legs:
 
     return
 
+
+label head:
+    scene blue
+    menu:
+        "Section: Head"
+        "Eyes":
+            jump eyes
+        "Mouth":
+            jump mouth
+        "Other":
+            jump other
+
+
+    return
+
+label arms:
+
+    scene black
+    menu:
+        "Section: Arms"
+        "Upper Arms":
+            jump upper_arm
+        "Elbows":
+            jump elbow
+        "Lower Arms":
+            jump lower_arm
+        "Hand":
+            jump hand
+
+    "{b}Arms{/b}."
+    return
+
+
+
+
+#Midsection
+label chest:
+    scene black
+
+    menu:
+        "Chest"
+        "Tightness":
+            jump tightness
+        "Trouble Breathing":
+            jump trouble_breathing
+        "Muscle Pain":
+            jump muscle_pain
+        "Other":
+            jump other_chest
+
+
+    return
+
+label back:
+    scene black
+    "Back"
+    return
+label abdomen:
+    scene black
+    "Abdomen"
+    return
+
+label Pregion:
+    scene black
+    "Pelvic Region"
+    return
+
+#Arms subsections
+
+label upper_arm:
+    scene black
+    "Back"
+    return
+label elbow:
+    scene black
+    "Abdomen"
+    return
+
+label lower_arm:
+    scene black
+    "Pelvic Region"
+    return
+label hand:
+    scene black
+    "Pelvic Region"
+    return   
+
+
+#Head
+
+label eyes:
+    scene violet
+    menu:
+        "Section: Head"
+        "Eyes":
+            jump gen_pain
+        "Mouth":
+            jump vision_loss
+        "Watery Eyes/Irritation":
+            jump watery_eyes
+        "Other":
+            jump other_eyes
+
+    return
+
+
+label mouth:
+
+    scene black
+
+    menu:
+        "Section: Mouth"
+        "Teeth":
+            jump teeth
+        "Tongue":
+            jump tongue
+        "Gums":
+            jump gums
+        "Other":
+            jump other_mouth
+
+    return
+
+label nose:
+
+    scene black
+
+    menu:
+        "Section: Nose"
+        "Runny Nose":
+            jump runny_nose
+        "Congestion":
+            jump congestion
+        "Sneezing":
+            jump sneezing
+        "Other":
+            jump other_nose
+
+    return
+
+label other:
+
+    scene black
+
+    menu:
+        "Section: Other"
+        "Headache":
+            jump headache
+        "Fever":
+            jump fever
+        "Psychological":
+            jump psych
+        "Other":
+            jump other_other
+    return
+
+#legs subsections
+
 label thighs:
 
     scene black
@@ -89,79 +247,30 @@ label foot:
     "{b}foot{/b}."
     return
 
-label head:
-    scene blue
-    menu:
-        "Section: Head"
-        "Eyes":
-            jump eyes
-        "Mouth":
-            jump mouth
-        "Other":
-            jump other
 
 
-    return
-
-
-label eyes:
-    scene violet
-    menu:
-        "Section: Head"
-        "Eyes":
-            jump gen_pain
-        "Mouth":
-            jump vision_loss
-        "Watery Eyes/Irritation":
-            jump watery_eyes
-        "Other":
-            jump other_eyes
-
-    return
-
-label gen_pain:
-
+#chest symptoms
+label tightness:
     scene black
-
-    "{b}General Pain -> eyes{/b}."
+    "Back"
     return
-
-label vision_loss:
-
+label trouble_breathing:
     scene black
-
-    "{b}Vision Loss{/b}."
+    "Abdomen"
     return
 
-label watery_eyes:
-
+label muscle_pain:
     scene black
-
-    "{b}Watery Eyes/Irritation/b}."
+    "Pelvic Region"
     return
-label other_eyes:
 
+label other_chest:
     scene black
-
-    "{b}Other{/b}"
+    "Pelvic Region"
     return
 
-label mouth:
 
-    scene black
-
-    menu:
-        "Section: Mouth"
-        "Teeth":
-            jump teeth
-        "Tongue":
-            jump tongue
-        "Gums":
-            jump gums
-        "Other":
-            jump other_mouth
-
-    return
+#mouth symptoms
 
 label teeth:
 
@@ -189,39 +298,87 @@ label other_mouth:
 
     "{b}Other->mouth{/b}"
     return
-label other:
+
+#eyes symptoms
+label gen_pain:
 
     scene black
 
-    "{b}Other-> Head{/b}."
+    "{b}General Pain -> eyes{/b}."
+    return
+
+label vision_loss:
+
+    scene black
+
+    "{b}Vision Loss{/b}."
+    return
+
+label watery_eyes:
+
+    scene black
+
+    "{b}Watery Eyes/Irritation/b}."
+    return
+label other_eyes:
+
+    scene black
+
+    "{b}Other{/b}"
+    return
+
+#nose symptoms
+
+label runny_nose:
+
+    scene black
+
+    "{b}thighs{/b}."
+    return
+label congestion:
+
+    scene black
+
+    "{b}thighs{/b}."
+    return
+label sneezing:
+
+    scene black
+
+    "{b}thighs{/b}."
+    return
+label other_nose:
+
+    scene black
+
+    "{b}thighs{/b}."
     return
 
 
-label arms:
+
+
+#other symptoms
+label headache:
 
     scene black
 
-    "{b}Arms{/b}."
+    "{b}thighs{/b}."
     return
+label fever:
 
-
-
-
-label chest:
     scene black
-    "Chest"
+
+    "{b}thighs{/b}."
     return
+label psych:
 
-label back:
     scene black
-    "Back"
-    return
-label abdomen:
-    scene black
-    "Abdomen"
-    return
 
-label Pregion:
+    "{b}thighs{/b}."
+    return
+label other_other:
+
     scene black
-    "Pelvic Region"
+
+    "{b}thighs{/b}."
     return
