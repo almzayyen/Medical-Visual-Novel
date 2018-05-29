@@ -19,7 +19,7 @@ label start:
     show sylvie green normal
     menu:
 
-        "What Part of your  body seems to be having issues?"
+        "What Part of your body seems to be having issues?"
 
         "Midsection":
             jump midsection
@@ -115,49 +115,49 @@ label chest:
     return
 
 label back:
-    scene black
+    scene back
     "Back"
     return
 label abdomen:
-    scene black
+    scene abdomen
     "Abdomen"
     return
 
 label Pregion:
-    scene black
+    scene Pregion
     "Pelvic Region"
     return
 
-#Arms subsections
+#Arm subsections
 
 label upper_arm:
-    scene black
-    "Back"
+    scene upper_arm
+    "Upper Arm"
     return
 label elbow:
-    scene black
-    "Abdomen"
+    scene elbows
+    "Elbows"
     return
 
 label lower_arm:
-    scene black
-    "Pelvic Region"
+    scene lower_arm
+    "Lower Arm"
     return
 label hand:
-    scene black
-    "Pelvic Region"
+    scene hand
+    "Hands"
     return   
 
 
 #Head
 
 label eyes:
-    scene violet
+    scene eyes
     menu:
-        "Section: Head"
-        "Eyes":
+        "Section: Eyes"
+        "General Pain":
             jump gen_pain
-        "Mouth":
+        "Vision Loss":
             jump vision_loss
         "Watery Eyes/Irritation":
             jump watery_eyes
@@ -206,7 +206,7 @@ label other:
     scene black
 
     menu:
-        "Section: Other"
+        "Section: Head->Other"
         "Headache":
             jump headache
         "Fever":
@@ -221,28 +221,28 @@ label other:
 
 label thighs:
 
-    scene black
+    scene thighs
 
     "{b}thighs{/b}."
     return
 
 label knees:
 
-    scene black
+    scene knees
 
     "{b}knees{/b}."
     return
 
 label lower_leg:
 
-    scene black
+    scene lower_leg
 
     "{b}lower leg{/b}."
     return
 
 label foot:
 
-    scene black
+    scene foot
 
     "{b}foot{/b}."
     return
@@ -252,21 +252,21 @@ label foot:
 #chest symptoms
 label tightness:
     scene black
-    "Back"
+    "Tightness"
     return
 label trouble_breathing:
     scene black
-    "Abdomen"
+    "Trouble Breathing"
     return
 
 label muscle_pain:
     scene black
-    "Pelvic Region"
+    "Muscle Pain"
     return
 
 label other_chest:
     scene black
-    "Pelvic Region"
+    "Other"
     return
 
 
@@ -274,27 +274,27 @@ label other_chest:
 
 label teeth:
 
-    scene black
+    scene teeth
 
     "{b}Teeth{/b}."
     return
 
 label tongue:
 
-    scene black
+    scene tongue
 
     "{b}Tongue{/b}."
     return
 
 label gums:
 
-    scene black
+    scene gums
 
     "{b}Gums{/b}."
     return
 label other_mouth:
 
-    scene black
+    scene _other_mouth
 
     "{b}Other->mouth{/b}"
     return
@@ -302,27 +302,27 @@ label other_mouth:
 #eyes symptoms
 label gen_pain:
 
-    scene black
+    scene eyes_pain
 
     "{b}General Pain -> eyes{/b}."
     return
 
 label vision_loss:
 
-    scene black
+    scene eyes_vision_loss
 
     "{b}Vision Loss{/b}."
     return
 
 label watery_eyes:
 
-    scene black
+    scene watery_eyes
 
     "{b}Watery Eyes/Irritation/b}."
     return
 label other_eyes:
 
-    scene black
+    scene other_eyess
 
     "{b}Other{/b}"
     return
@@ -331,27 +331,27 @@ label other_eyes:
 
 label runny_nose:
 
-    scene black
+    scene _runny_nose
 
-    "{b}thighs{/b}."
+    "{b}Runny Nose{/b}."
     return
 label congestion:
 
-    scene black
+    scene _congestion
 
-    "{b}thighs{/b}."
+    "{b}Congestion{/b}."
     return
 label sneezing:
 
-    scene black
+    scene _sneezing
 
-    "{b}thighs{/b}."
+    "{b}Sneezing{/b}."
     return
 label other_nose:
 
-    scene black
+    scene _other_nose
 
-    "{b}thighs{/b}."
+    "{b}Nose->Other{/b}."
     return
 
 
@@ -360,25 +360,25 @@ label other_nose:
 #other symptoms
 label headache:
 
-    scene black
+    scene headache
 
-    "{b}thighs{/b}."
+    "{b}Headache{/b}."
     return
 label fever:
 
-    scene black
+    scene fever
 
-    "{b}thighs{/b}."
+    "{b}Fever{/b}."
     return
 label psych:
 
-    scene black
+    scene psych
 
-    "{b}thighs{/b}."
+    "{b}Psych{/b}."
     return
 label other_other:
 
-    scene black
+    scene _other_other
 
-    "{b}thighs{/b}."
+    "{b}Other->Other{/b}."
     return
