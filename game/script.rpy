@@ -19,7 +19,7 @@ label start:
     show sylvie green normal
     menu:
 
-        "What Part of your  body seems to be having issues?"
+        "What Part of your body seems to be having issues?"
 
         "Midsection":
             jump midsection
@@ -31,7 +31,7 @@ label start:
             jump head
 
     return
-
+#main sections
 label midsection:
 
     scene red
@@ -61,33 +61,6 @@ label legs:
 
     return
 
-label thighs:
-
-    scene black
-
-    "{b}thighs{/b}."
-    return
-
-label knees:
-
-    scene black
-
-    "{b}knees{/b}."
-    return
-
-label lower_leg:
-
-    scene black
-
-    "{b}lower leg{/b}."
-    return
-
-label foot:
-
-    scene black
-
-    "{b}foot{/b}."
-    return
 
 label head:
     scene blue
@@ -97,20 +70,96 @@ label head:
             jump eyes
         "Mouth":
             jump mouth
+        "Nose":
+            jump nose
         "Other":
             jump other
 
 
     return
 
+label arms:
+
+    scene black
+    menu:
+        "Section: Arms"
+        "Upper Arms":
+            jump upper_arm
+        "Elbows":
+            jump elbow
+        "Lower Arms":
+            jump lower_arm
+        "Hand":
+            jump hand
+
+    "{b}Arms{/b}."
+    return
+
+
+
+
+#Midsection
+label chest:
+    scene black
+
+    menu:
+        "Chest"
+        "Tightness":
+            jump tightness
+        "Trouble Breathing":
+            jump trouble_breathing
+        "Muscle Pain":
+            jump muscle_pain
+        "Other":
+            jump other_chest
+
+
+    return
+
+label back:
+    scene back
+    "Back"
+    return
+label abdomen:
+    scene abdomen
+    "Abdomen"
+    return
+
+label Pregion:
+    scene Pregion
+    "Pelvic Region"
+    return
+
+#Arm subsections
+
+label upper_arm:
+    scene upper_arm
+    "Upper Arm"
+    return
+label elbow:
+    scene elbows
+    "Elbows"
+    return
+
+label lower_arm:
+    scene lower_arm
+    "Lower Arm"
+    return
+label hand:
+    scene hand
+    "Hands"
+    return   
+
+
+#Head
 
 label eyes:
-    scene violet
+    scene eyes
     menu:
-        "Section: Head"
-        "Eyes":
+        "Section: Eyes"
+        "General Pain":
             jump gen_pain
-        "Mouth":
+        "Vision Loss":
             jump vision_loss
         "Watery Eyes/Irritation":
             jump watery_eyes
@@ -119,32 +168,6 @@ label eyes:
 
     return
 
-label gen_pain:
-
-    scene black
-
-    "{b}General Pain -> eyes{/b}."
-    return
-
-label vision_loss:
-
-    scene black
-
-    "{b}Vision Loss{/b}."
-    return
-
-label watery_eyes:
-
-    scene black
-
-    "{b}Watery Eyes/Irritation/b}."
-    return
-label other_eyes:
-
-    scene black
-
-    "{b}Other{/b}"
-    return
 
 label mouth:
 
@@ -156,72 +179,242 @@ label mouth:
             jump teeth
         "Tongue":
             jump tongue
-        "Gums":
-            jump gums
+        "Throat":
+            jump throat
         "Other":
             jump other_mouth
 
     return
 
-label teeth:
+label nose:
 
     scene black
+
+    menu:
+        "Section: Nose"
+        "Runny Nose":
+            jump runny_nose
+        "Congestion":
+            jump congestion
+        "Sneezing":
+            jump sneezing
+        "Other":
+            jump other_nose
+
+    return
+
+label other:
+
+    scene black
+
+    menu:
+        "Section: Head->Other"
+        "Headache":
+            jump headache
+        "Fever":
+            jump fever
+        "Psychological":
+            jump psych
+        "Other":
+            jump other_other
+    return
+
+#legs subsections
+
+label thighs:
+
+    scene thighs
+
+    "{b}thighs{/b}."
+    return
+
+label knees:
+
+    scene knees
+
+    "{b}knees{/b}."
+    return
+
+label lower_leg:
+
+    scene lower_leg
+
+    "{b}lower leg{/b}."
+    return
+
+label foot:
+
+    scene foot
+
+    "{b}foot{/b}."
+    return
+
+
+
+#chest symptoms
+label tightness:
+    scene black
+    "Tightness"
+    return
+label trouble_breathing:
+    scene black
+    "Trouble Breathing"
+    return
+
+label muscle_pain:
+    scene black
+    "Muscle Pain"
+    return
+
+label other_chest:
+    scene black
+    "Other"
+    return
+
+
+#mouth symptoms
+
+label teeth:
+
+    scene teeth
 
     "{b}Teeth{/b}."
     return
 
 label tongue:
 
-    scene black
+    scene tongue
 
     "{b}Tongue{/b}."
     return
 
-label gums:
+label throat:
 
-    scene black
+    scene throat
 
-    "{b}Gums{/b}."
+    "{b}Throat{/b}."
+
     return
 label other_mouth:
 
-    scene black
+    scene _other_mouth
 
     "{b}Other->mouth{/b}"
     return
-label other:
 
-    scene black
+#eyes symptoms
+label gen_pain:
 
-    "{b}Other-> Head{/b}."
+    scene eyes_pain
+
+    "{b}General Pain -> eyes{/b}."
+    return
+
+label vision_loss:
+
+    scene eyes_vision_loss
+
+    "{b}Vision Loss{/b}."
+    return
+
+label watery_eyes:
+
+    scene watery_eyes
+
+    "{b}Watery Eyes/Irritation/b}."
+    return
+label other_eyes:
+
+    scene other_eyess
+
+    "{b}Other{/b}"
+    return
+
+#nose symptoms
+
+label runny_nose:
+
+    scene _runny_nose
+
+    "{b}Runny Nose{/b}."
+    return
+label congestion:
+
+    scene _congestion
+
+    "{b}Congestion{/b}."
+    return
+label sneezing:
+
+    scene _sneezing
+
+    "{b}Sneezing{/b}."
+    return
+label other_nose:
+
+    scene _other_nose
+
+    "{b}Nose->Other{/b}."
     return
 
 
-label arms:
 
-    scene black
 
-    "{b}Arms{/b}."
+#other symptoms
+label headache:
+
+    scene headache
+
+    "Headache."
+
+    menu:
+        "Please Describe your headache."
+        "Throbbing":
+            jump throbbing_head
+        "Burning":
+            jump burning_head
+        "Dull":
+            jump dull_head
+        "Other":
+            jump other_headache
     return
 
-
-
-
-label chest:
-    scene black
-    "Chest"
+#throbbing headache
+label throbbing_head:
+    scene throbbing_headache
+    "{b}Throbbing Headache{/b}"
+    return  
+#burning headache  
+label burning_head:
+    scene burning_head
+    "{b}Burning Headache{/b}"
+    return  
+    
+#dull headache
+label dull_head:
+    scene dull_head
+    "{b}Dull Headache{/b}"
     return
+#other headache
+label other_headache:
+    scene other_headache
+    "{b}Other Headache{/b}"
+    return       
+label fever:
 
-label back:
-    scene black
-    "Back"
-    return
-label abdomen:
-    scene black
-    "Abdomen"
-    return
+    scene fever
 
-label Pregion:
-    scene black
-    "Pelvic Region"
+    "{b}Fever{/b}."
+    return
+label psych:
+
+    scene psych
+
+    "{b}Psych{/b}."
+    return
+label other_other:
+
+    scene _other_other
+
+    "{b}Other->Other{/b}."
     return
